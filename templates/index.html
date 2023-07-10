@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutorial</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <h1 class="text-center">Image Classifier</h1>
+
+        <form class="p-3 text-center" action='/', method="post" enctype="multipart/form-data">
+            <input class="form-control" type="file" name="imagefile" >
+            <input class="btn btn-primary mt-3"type="submit" value="Predict Image" >
+        </form>
+
+        {% if prediction %}
+            <p class="text-center"> Image is a {{prediction}}</p>
+        {% endif %}
+    </body>
+</html>
